@@ -55,11 +55,17 @@ void BinTree_in(TNo* root){
         BinTree_in(root->right);
     }
 }
-//TODO: implementar
-TNo* BinTree_search(TNo* root, int k){
-
+TNo* BinTree_search(TNo* x, int k){
+    while(x!=NULL && k != x->key){
+        printf("Estou em: [%d]\n",x->key);
+        x = (k < x->key)? x->left: x->right;
+    }
+    return x;
 }
-//TODO: implementar
-TNo* BinTree_search_r(TNo* root, int k){
-
+TNo* BinTree_search_r(TNo* x, int k){
+    if(x!=NULL)
+        printf("Estou em: [%d]\n",x->key);
+    if (x == NULL || k==x->key)
+        return x;
+    return BinTree_search_r((k < x->key)? x->left:x->right, k);
 }

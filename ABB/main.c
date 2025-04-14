@@ -19,7 +19,14 @@ int main(){
         if(!BinTree_insert(T, V[i]))
             printf("Erro ao inserir: V[%d] = %d\n", i, V[i]);
     //Exemplo de chamada da busca...
-    BinTree_search(T->root, 12);
+    int x = 17;
+    printf("Buscando no com a chave: %d\n", x);
+    TNo* node = BinTree_search_r(T->root, x);
+    if(node){
+        printf("Encontrei o no em %p valor da chave:%d \n", node, node->key);
+    }else{
+        printf("No nao encontrado!\n");
+    }
     print_tree(T);
     return 0;
 }
