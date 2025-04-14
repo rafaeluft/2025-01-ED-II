@@ -55,4 +55,11 @@ void BinTree_in(TNo* root){
         BinTree_in(root->right);
     }
 }
+//TODO: implementar
+TNo* BinTree_search(TNo* root, int k){
 
+}
+//TODO: implementar
+TNo* BinTree_search_r(TNo* root, int k){
+
+}

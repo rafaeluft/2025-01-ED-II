@@ -18,7 +18,8 @@ int main(){
     for(i = 0; i<sizeof(V)/sizeof(int); i++)
         if(!BinTree_insert(T, V[i]))
             printf("Erro ao inserir: V[%d] = %d\n", i, V[i]);
-    
+    //Exemplo de chamada da busca...
+    BinTree_search(T->root, 12);
     print_tree(T);
     return 0;
 }

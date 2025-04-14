@@ -13,6 +13,7 @@ typedef struct {
 BinTree* BinTree_create();
 bool BinTree_insert(BinTree*, int);
 TNo* BinTree_search(TNo*, int);
+TNo* BinTree_search_r(TNo*, int);
 void BinTree_pre(TNo*);
 void BinTree_in(TNo*);
 void BinTree_pos(TNo*);
