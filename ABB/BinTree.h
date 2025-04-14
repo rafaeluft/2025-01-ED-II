@@ -1,0 +1,20 @@
+#ifndef BINTREE_H
+#define BINTREE_H
+#include <stdbool.h>
+typedef struct _no {
+    int key;
+    struct _no *left, *right, *p;
+}TNo;
+
+typedef struct {
+    TNo* root;
+}BinTree;
+
+BinTree* BinTree_create();
+bool BinTree_insert(BinTree*, int);
+TNo* BinTree_search(TNo*, int);
+void BinTree_pre(TNo*);
+void BinTree_in(TNo*);
+void BinTree_pos(TNo*);
+
+#endif
